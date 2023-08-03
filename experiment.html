@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+    
+    <!-- import jsPsych from your local bundle-->
+    <script src="../jspsych/dist/jspsych.js"></script>
+
+    <!-- import the jsPsych style file from your local bundle -->
+    <link href="../jspsych/dist/jspsych.css" rel="stylesheet" type="text/css" />
+    
+    <!-- import our plugin -->
+    <script src="plugin-lexical-decision-json.js"></script>
+
+    <script src="../gasp/gsap.min.js"></script>
+  </head>
+  
+  <body>
+    
+
+    <!-- jsPsych code goes here -->
+    <script type="text/javascript">
+
+      // initialize jsPsych
+      const jsPsych = initJsPsych();
+
+      // setup a timeline object 
+      let timeline = [];
+
+      const lightGrid = {
+        type: jsPsychLightGrid,
+        filepath: 'gamefile.json'
+      }
+      timeline.push(lightGrid);
+
+      // run the experiment
+      jsPsych.run(timeline);
+
+
+    </script>
+  </body>
+  
+</html>
